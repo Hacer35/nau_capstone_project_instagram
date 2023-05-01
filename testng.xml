@@ -2,9 +2,35 @@
 <suite name="regression tests">
     <test name="regression classes">
         <classes>
-            <class name="tests.US01_TC01_ValidSignIn"/>
-            <class name="tests.US02_TC01_InValidEmailSignIn"/>
-            <class name="tests.US04_TC01_SearchProduct"/>
+            <class name="EpicOneTest">
+            	<methods>
+            		<include name="testCaseOne"></include>
+            		<exclude name="testCaseTwo"></exclude>
+            		<exclude name="testCaseThree"></exclude>
+            		<exclude name="testCaseFour"></exclude>
+            		<exclude name="testCaseFive"></exclude>
+            	</methods>
+            </class>
+            
+            <class name="EpicTwoTest">
+            	<methods>
+            		<include name="testCaseOne"></include>
+            		<exclude name="testCaseTwo"></exclude>
+            		<exclude name="testCaseThree"></exclude>
+            		<exclude name="testCaseFour"></exclude>
+            		<exclude name="testCaseFive"></exclude>
+            	</methods>
+            </class>
+            
+            <class name="EpicThreeTest">
+            	<methods>
+            		<include name="testCaseOne"></include>
+            		<exclude name="testCaseTwo"></exclude>
+            		<exclude name="testCaseThree"></exclude>
+            		<exclude name="testCaseFour"></exclude>
+            		<exclude name="testCaseFive"></exclude>
+            	</methods>
+            </class>
 
         </classes>
     </test>

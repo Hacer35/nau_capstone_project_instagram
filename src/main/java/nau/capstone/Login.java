@@ -29,19 +29,26 @@ public class Login {
     
     
     public void navigateToInstagram() {
-
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         Driver.getDriver().navigate().refresh();
     }
     
+    public void enterLoginCredentials() {
+    	username.sendKeys(ConfigReader.getProperty("DelegatedUserEmail"));
+    	password.sendKeys(ConfigReader.getProperty("DelegatedUserPassword"));
+    }
+    
+    public void clickLoginButton() {
+    	loginBtn.click();
+  }
+    
     public void loginInstagram() {
     	
     	navigateToInstagram();
+    	enterLoginCredentials();
+    	clickLoginButton();	
     	
-    	
-    	
-    	
-}
+    }
     
 
 
