@@ -2,7 +2,7 @@
 <suite name="regression tests">
     <test name="regression classes">
         <classes>
-            <class name="EpicOneTest">
+            <class name="tests.EpicOneTest">
             	<methods>
             		<include name="testCaseOne"></include>
             		<exclude name="testCaseTwo"></exclude>
@@ -12,7 +12,7 @@
             	</methods>
             </class>
             
-            <class name="EpicTwoTest">
+            <class name="tests.EpicTwoTest">
             	<methods>
             		<include name="testCaseOne"></include>
             		<exclude name="testCaseTwo"></exclude>
@@ -22,7 +22,7 @@
             	</methods>
             </class>
             
-            <class name="EpicThreeTest">
+            <class name="tests.EpicThreeTest">
             	<methods>
             		<include name="testCaseOne"></include>
             		<exclude name="testCaseTwo"></exclude>

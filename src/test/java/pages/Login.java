@@ -1,4 +1,4 @@
-package nau.capstone;
+package pages;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;

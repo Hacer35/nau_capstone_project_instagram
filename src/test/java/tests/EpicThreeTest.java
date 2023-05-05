@@ -1,7 +1,8 @@
-package nau.capstone;
+package tests;
 
 import org.testng.annotations.Test;
 
+import pages.Login;
 import utilities.Driver;
 import utilities.TestBaseReport;
 
