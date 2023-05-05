@@ -10,7 +10,7 @@ import org.testng.Assert;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class NewPost {
+public class NewPost extends BasePage{
 	
 	public NewPost() {
         PageFactory.initElements(Driver.getDriver(), this);
@@ -89,8 +89,7 @@ public class NewPost {
     @FindBy(xpath = "//h1//div[text()='Create new reel']")
     public WebElement createNewReelTitle;
     
-    @FindBy(xpath = "//div[text()='Share']")
-    public WebElement shareButton; 
+   
     @FindBy(xpath = "//*[@aria-label='Write a caption...']")
     public WebElement writeACaption; 
     @FindBy(xpath = "//*[@aria-label='Emoji']")
@@ -103,8 +102,7 @@ public class NewPost {
     public WebElement advancedSettings; 
     @FindBy(xpath = "//span[text()='Your post has been shared.']")
     public WebElement successMsg; 
-    @FindBy(xpath = "//*[@aria-label='Close']")
-    public WebElement closeButton;  
+     
     @FindBy(xpath = "//*[@aria-label='Plus icon']")
     public WebElement plusIconButton; 
     @FindBy(xpath = "(//button[@aria-label='Next'])[1]")
@@ -184,21 +182,7 @@ public class NewPost {
     	 Assert.assertTrue(selectCropButton.isEnabled());
     	 
     }
-    public void clickNext() {
-    	nextButton.click();
-    }
-    public void clickBack() {
-    	backButton.click();
-    }
-    public void clickShare() {
-    	shareButton.click();
-    }
-    public void clickClose() {
-    	closeButton.click();
-    }
-    public void clickDiscard() {
-    	discardButton.click();
-    }
+    
     public void verifyEditSection() {  
     	Assert.assertTrue(editTitle.isDisplayed());
 		Assert.assertTrue(backButton.isEnabled());
