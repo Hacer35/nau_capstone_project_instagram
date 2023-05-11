@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="5" total="6" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-05-10T20:24:26 EDT" name="Default suite" finished-at="2023-05-10T20:25:02 EDT" duration-ms="35158">
+    <groups>
+    </groups>
+    <test started-at="2023-05-10T20:24:26 EDT" name="Default test" finished-at="2023-05-10T20:25:02 EDT" duration-ms="35158">
+      <class name="tests.EpicOneTest">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:tests.EpicOneTest@706cb08]" started-at="2023-05-10T20:24:26 EDT" name="setUpTest" finished-at="2023-05-10T20:24:27 EDT" duration-ms="107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpTest -->
+        <test-method signature="testCaseOne()[pri:0, instance:tests.EpicOneTest@706cb08]" started-at="2023-05-10T20:24:27 EDT" name="testCaseOne" finished-at="2023-05-10T20:25:01 EDT" duration-ms="34532" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCaseOne -->
+        <test-method is-config="true" signature="tearDownTest()[pri:0, instance:tests.EpicOneTest@706cb08]" started-at="2023-05-10T20:25:01 EDT" name="tearDownTest" finished-at="2023-05-10T20:25:02 EDT" duration-ms="487" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+        <test-method is-config="true" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:tests.EpicOneTest@706cb08]" started-at="2023-05-10T20:25:01 EDT" name="tearDownMethod" finished-at="2023-05-10T20:25:01 EDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testCaseOne status=SUCCESS method=EpicOneTest.testCaseOne()[pri:0, instance:tests.EpicOneTest@706cb08] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+      </class> <!-- tests.EpicOneTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

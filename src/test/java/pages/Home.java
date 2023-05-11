@@ -12,6 +12,7 @@ import org.testng.Assert;
 
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.Log;
 
 public class Home extends BasePage{
 	
@@ -34,11 +35,11 @@ public class Home extends BasePage{
     public WebElement messenger;
     @FindBy(xpath = "//*[@aria-label='Notifications']")
     public WebElement notifications;
-    @FindBy(xpath = "//*[@aria-label='New Post']")
+    @FindBy(xpath = "//*[@aria-label='New post']")
     public WebElement newPost;
     @FindBy(xpath = "//*[@aria-label='Settings']")
     public WebElement settings;
-    @FindBy(xpath = "//*[contains(@alt,'naucapstone2023')]")
+    @FindBy(xpath = "//*[contains(@alt,'naucapstone2023')]/../../../../../../..//a")
     public WebElement profile;
     
     
@@ -84,30 +85,59 @@ public class Home extends BasePage{
     
     
     public void navigateToHomePageMainOptions(String optionName) {    	
-    	switch (optionName) {
-    	case "Home":
+    	if (optionName.equals("Home")) {
     		home.click();
-    	case "Search":
+    	}else if (optionName.equals("Search")) {
     		search.click();
-    	case "Explore":
+    	}else if (optionName.equals("Explore")) {
     		explore.click();
-    	case "Reels":
+    	}else if (optionName.equals("Reels")) {
     		reels.click();
-    	case "Messenger":
+    	}else if (optionName.equals("Messenger")) {
     		messenger.click();
-    	case "Notifications":
+    	}else if (optionName.equals("Notifications")) {
     		notifications.click();
-    	case "New Post":
+    	}else if (optionName.equals("New Post")) {
     		newPost.click();
-    	case "Settings":
+    	}else if (optionName.equals("Settings")) {
     		settings.click();
-    	case "Profile":
+    	}else if (optionName.equals("Profile")) {
     		profile.click();
     	}    	
     	
     }
     
-    public void commentSomeonesPost() {
+    public void verifyHomePageMainOptions() {  
+    	waitFor(1);
+    	if(buttonNotNow.isDisplayed()) {
+    		clickNotNowButton();
+        	}
+    		profile.click(); waitFor(2);
+    		Log.info("User is able to navigate to Profile.");
+    		home.click(); waitFor(2);
+    		Log.info("User is able to navigate to Home.");
+    		search.click();waitFor(2);
+    		Log.info("User is able to navigate to Search.");    		
+    		explore.click();waitFor(3);
+    		Log.info("User is able to navigate to Explore.");    		
+    		reels.click();waitFor(3);
+    		Log.info("User is able to navigate to Reels.");    		
+    		messenger.click();waitFor(2);
+    		Log.info("User is able to navigate to Messenger.");    		
+    		notifications.click(); waitFor(2); 
+    		Log.info("User is able to navigate to Notifications.");    		
+    		newPost.click();waitFor(2);
+    		Log.info("User is able to navigate to New Post.");
+    		clickClose();waitFor(2);
+    		settings.click();waitFor(2);
+    		Log.info("User is able to navigate to Settings.");
+    		waitFor(2);
+    	  	
+    	
+    }
+    
+    @SuppressWarnings("unchecked")
+	public void commentSomeonesPost() {
     	 List<WebElement> postList =  (List<WebElement>) posts;
     	 List<WebElement> commentList =  (List<WebElement>) comments;
 
