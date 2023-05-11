@@ -48,7 +48,7 @@ public class TestBaseReport {
         // Driver.closeDriver();
     }
 
-    public static String getScreenshot(String name) throws IOException {
+    public static String getScreenshot(String name) throws IOException, InterruptedException {
         String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
         TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
         File source = ts.getScreenshotAs(OutputType.FILE);

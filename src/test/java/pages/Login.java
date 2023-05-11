@@ -9,16 +9,15 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class Login {
+public class Login extends BasePage {
 	
-	public Login() {
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
-	Actions action = new Actions(Driver.getDriver());
-    JavascriptExecutor jse = (JavascriptExecutor) Driver.getDriver();
-    Driver driver= new Driver();
-    
-    @FindBy(xpath = "//input[@aria-label='Phone number, username, or email']")
+	    
+    public Login()  {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@FindBy(xpath = "//input[@aria-label='Phone number, username, or email']")
     public WebElement username;
     
     @FindBy(xpath = "//input[@aria-label='Password']")
@@ -28,7 +27,7 @@ public class Login {
     public WebElement loginBtn;
     
     
-    public void navigateToInstagram() {
+    public void navigateToInstagram()  {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
         Driver.getDriver().navigate().refresh();
     }
@@ -42,11 +41,18 @@ public class Login {
     	loginBtn.click();
   }
     
-    public void loginInstagram() {
+    public void loginInstagram()  {
     	
     	navigateToInstagram();
+    	waitFor(1);
     	enterLoginCredentials();
-    	clickLoginButton();	
+    	waitFor(1);
+    	clickLoginButton();
+    	waitFor(1);
+    	if(notNowButton.isDisplayed()) {
+    	clickNotNow();
+    	}
+
     	
     }
     

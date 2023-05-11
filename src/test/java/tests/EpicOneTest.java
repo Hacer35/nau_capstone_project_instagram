@@ -16,17 +16,17 @@ public class EpicOneTest extends TestBaseReport{
 	  Login loginPage =new Login();
 	  Home homePage =new Home();
 	  NewPost newPostPage =new NewPost();
-
-	 @Test
-	    public void testCaseOne()  {
+	  
+	  @Test
+	    public void testCaseOne() throws InterruptedException  {
 	         extentTest=extentReports.createTest("Epic One - TC001",
 	              "User should be able to verify new post creation options.");
 	         loginPage.loginInstagram();
-	         homePage.navigateToHomePageMainOptions("New Post");
-	         newPostPage.uploadPicture();
-	         newPostPage.verifyNewPostActionButtons();
+	         homePage.verifyHomePageMainOptions();
 	         Driver.closeDriver();
 	    }
+
+	 
 	 
 	 @Test
 	    public void testCaseTwo()  {
@@ -64,6 +64,16 @@ public class EpicOneTest extends TestBaseReport{
 	    }
 	 @Test
 	    public void testCaseFive()  {
+	         extentTest=extentReports.createTest("Epic One - TC001",
+	              "User should be able to verify new post creation options.");
+	         loginPage.loginInstagram();
+	         homePage.navigateToHomePageMainOptions("New Post");
+	         newPostPage.uploadPicture();
+	         newPostPage.verifyNewPostActionButtons();
+	         Driver.closeDriver();
+	    }
+	 @Test
+	    public void negativeTestCase()  {
 	         extentTest=extentReports.createTest("Epic One - TC005",
 	              "User should NOT be able to create a new post when navigates to back.");
 	         loginPage.loginInstagram();
@@ -71,4 +81,5 @@ public class EpicOneTest extends TestBaseReport{
 	         Driver.closeDriver();
 
 	    }
+	
 }

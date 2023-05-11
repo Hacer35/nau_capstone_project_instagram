@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [regression tests]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="regression classes(failed)">
+    <classes>
+      <class name="tests.EpicOneTest">
+        <methods>
+          <include name="tearDownMethod"/>
+          <include name="setUpTest"/>
+          <include name="tearDownTest"/>
+          <include name="testCaseOne"/>
+        </methods>
+      </class> <!-- tests.EpicOneTest -->
+      <class name="tests.EpicThreeTest">
+        <methods>
+          <include name="testCaseOne"/>
+          <include name="tearDownMethod"/>
+          <include name="setUpTest"/>
+          <include name="tearDownTest"/>
+        </methods>
+      </class> <!-- tests.EpicThreeTest -->
+      <class name="tests.EpicTwoTest">
+        <methods>
+          <include name="tearDownMethod"/>
+          <include name="setUpTest"/>
+          <include name="testCaseOne"/>
+          <include name="tearDownTest"/>
+        </methods>
+      </class> <!-- tests.EpicTwoTest -->
+    </classes>
+  </test> <!-- regression classes(failed) -->
+</suite> <!-- Failed suite [regression tests] -->
